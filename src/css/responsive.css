@@ -1,0 +1,33 @@
+@media (max-width: 128rem) {
+    body {
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 76.8rem) {
+    .information.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .information .description {
+        width: 60%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 42.5rem) {
+    body {
+        padding: 4rem;
+    }
+
+    .information .description {
+        width: 100%;
+    }
+
+    .content {
+        min-height: 70vh;
+        gap: 5rem;
+    }
+}

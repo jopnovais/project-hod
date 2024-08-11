@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    max-width: 128rem;
+    margin: 0 auto;
+}
+
+.carrosel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.informacoes {
+    display: none;
+    margin-top: 20rem;
+}
+
+.informacoes h1 {
+    font-family: "GOT";
+    font-size: 3.5rem;
+    margin-bottom: 8rem;
+    letter-spacing: 0.8rem;
+}
+
+@font-face {
+    font-family: "GOT";
+    src: url(../font/GOT.ttf);
+}
+
+.informacoes.ativa {
+    display: block;
+    color: #fff;
+
+}
+
+.informacoes .descricao {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    width: 49%;
+    line-height: 4rem;
+    padding-right: 1.5rem;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.botoes-carrosel {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.botao {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: 10rem;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.botao.selecionado {
+    background-color: #1d8346;
+}
+
+.botao:hover {
+    background-color: #1d8346;
+    color: black;
+}
+
+.imagem{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+}
+
+.imagem.ativa {
+    display: block;
+    animation: changeimg 0.7s ease-in-out;
+}
+
+@keyframes changeimg {
+    from {
+        opacity: 0.85;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main::after {
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    position: fixed;
+    z-index: -1;
+}
+
+footer {
+    color: #fff;
+    margin-top: 25rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
